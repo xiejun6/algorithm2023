@@ -4,11 +4,9 @@ import "fmt"
 
 func trap(height []int) int {
 	sum := 0
-	var stack []int
+	var stack []int //单调递减栈，存下标
 	for i, v := range height {
-		fmt.Println("-----------stack:", stack)
-		for len(stack) > 0 && v > stack[len(stack)-1] {
-			fmt.Println("stack:", stack)
+		for len(stack) > 0 && v > height[stack[len(stack)-1]] {
 			topIndex := stack[len(stack)-1]
 			stack = stack[:len(stack)-1]
 			if len(stack) == 0 {
