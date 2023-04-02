@@ -10,7 +10,7 @@ func spiralOrder(matrix [][]int) []int {
 	count, maxCount := 0, m*n
 	ans := make([]int, 0, maxCount)
 	for {
-		//上
+		//上边
 		for i := minCol; i <= maxCol; i++ {
 			ans = append(ans, matrix[minRow][i])
 			count++
