@@ -52,11 +52,11 @@ func TestDeleteDuplicates(t *testing.T) {
 	fmt.Println("=====================")
 	data = []int{1, 1, 2}
 	head = MakeList(data)
-	newHead = deleteDuplicates(head)
+	newHead = deleteDuplicates2(head)
 	PrintList(newHead)
 
 	data = []int{1, 1, 2, 3, 3}
 	head = MakeList(data)
-	newHead = deleteDuplicates(head)
+	newHead = deleteDuplicates2(head)
 	PrintList(newHead)
 }
